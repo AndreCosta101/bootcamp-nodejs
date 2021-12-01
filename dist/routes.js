@@ -6,11 +6,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.createCourse = void 0;
 const CreateCourseService_1 = __importDefault(require("./CreateCourseService"));
 function createCourse(request, response) {
-    console.log('OI');
     CreateCourseService_1.default.execute({
         name: "NodeJS",
         duration: 10,
         educator: "Dani"
+    });
+    CreateCourseService_1.default.execute({
+        name: "ReacJS",
+        educator: "Diego"
     });
     return response.send();
 }
